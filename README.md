@@ -1,6 +1,8 @@
 
 # HangMan
 
+![alt tag]()
+
 >Building a simple hangman game for a WDI 13 project 
 
 A word will be given for a user to guess.
