@@ -23,4 +23,4 @@ If the user fills out the empty spaces, a message of "You win" will pop up else 
 >Javascript, JQuery 
 
 
-![alt tag](https://github.com/olee2002/hangMan/blob/master/images/framework.jpg)
+![alt tag](https://github.com/olee2002/hangMan/blob/master/images/framework01.jpg)
