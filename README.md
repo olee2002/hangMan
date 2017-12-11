@@ -1,7 +1,7 @@
 
 # HangMan
 
-![alt tag]()
+![alt tag](https://github.com/olee2002/hangMan/blob/master/images/hangman.png)
 
 >Building a simple hangman game for a WDI 13 project 
 
