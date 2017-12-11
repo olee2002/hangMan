@@ -3,8 +3,7 @@
 
 >Building a simple hangman game for a WDI 13 project 
 
-A word will be give for a user to guess.
-
+A word will be given for a user to guess.
 The game will have empty spaces for the user to input a guessed letter to match the ones in the given word. If the letter matches, it will be filled in to the matching space.
 If not, number of opportunities to try will go down by one.
 
@@ -24,3 +23,4 @@ If the user fills out the empty spaces, a message of "You win" will pop up else 
 >Javascript, JQuery 
 
 
+![alt tag](pathofimage)
