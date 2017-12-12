@@ -34,7 +34,7 @@ header{
     flex:1;
     border: 1px black solid;
     width: 70vh;
-    height: 35vh;
+    height: 60vh;
     font-size: 1.25rem;
     text-align: center;
 }
@@ -50,7 +50,14 @@ header{
     
     font-size: 1rem;
 }
-
+ClickOnLetters{
+    display:flex;
+}
+#Alphabet{
+    width: 40vh;
+    height: 15vh;
+    font-size: 2rem;
+}
 .subcontainer02{
     display: flex;
     justify-content: center;
