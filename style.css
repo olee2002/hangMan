@@ -1,4 +1,67 @@
 body {
     font-family: 'Indie Flower', cursive; 
     background-color: gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.container{
+    border: 2px rgb(0, 0, 0) solid;
+}
+header{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(197, 150, 91);
+    width: 60vh;
+    height: 12vh;
+    border: 1px rgb(0, 0, 0) solid;
+    font-size: 4.5em;
+    text-align: center;
+}
+
+
+.subcontainer01{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(65, 141, 69);
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex:1;
+    border: 1px black solid;
+    width: 60vh;
+    height: 35vh;
+    font-size: 1.25em;
+    text-align: center;
+}
+.subcontainer02{
+    display: flex;
+    justify-content: center;
+    flex:1;
+    background-color: rgb(197, 150, 91);
+    border: 1px black solid;
+    width: 60vh;
+    height: 20vh;
+    font-size: 1em;
+   
+}
+#EmptyLetters{
+    font-size: 2em;
+}
+
+#LetterBank,#NumsOfTries,#Hangman{
+    display:  flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px black solid;
+    flex:1;
+    
+}
+
+#WrongLetters,#TriesLeft,#image{
+    font-size:2em;
 }
