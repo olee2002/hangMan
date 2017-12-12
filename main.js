@@ -20,16 +20,22 @@ let start = function () {
 //start();
 $('#reset').on('click', start);
 
+
 //create the alphabet letters to choose in the game
-function iterateAlphabet() {
-    var str = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    let letterChoice = str.split('')
+var str = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+let letterChoice = str.split('')
+let iterateAlphabet = function() {
+    
     for (var i = 0; i < letterChoice.length; i++) {
     //console.log(letterChoice[i])
+    `<div class='letter'>A</div> `
  }
- $('#Alphabet').html(letterChoice.join(' '))
+ $('#Alphabet').html(letterChoice)
 }
-iterateAlphabet()
+iterateAlphabet();
+$('#Alphabet').on ('click', function(){
+this.target.letterChoice
+})
 
 
 
