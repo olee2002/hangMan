@@ -32,23 +32,24 @@ $(document).ready(function () {
             let letterOutput = givenArray
             let indexOfLetter = answerArray.indexOf(letterInput)
             if (indexOfLetter === -1) {
+                //msg when fail
                 alert('try again');
+                //Remaining tries counter
                 count -= 1;
                 $('#TriesLeft').html(count);
                 letterBank.push(letterInput)
                 $('#WrongLetters').html(letterBank)
-                console.log(letterBank.join(' '))
+                //Adding wrong letter to the letter bank
+                //console.log(letterBank.join(' '))
                 this.innerHTML = '_';
 
             } else {
-
-                alert("Yay You've got it")
-                // givenArray[indexOfLetter]=letterInput
-                //$('#EmptyLetters').html(letterInput[indexOfLetter]);
+                //msg when succeed
+                //alert("Yay You've got it")
+                //Add letter to the empty
                 letterOutput[indexOfLetter]=letterInput
                 $('#EmptyLetters').html(letterOutput.join(' ').toUpperCase());
-                console.log(letterOutput[indexOfLetter])
-                console.log(letterOutput)
+                
             }
 
         })
