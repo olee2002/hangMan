@@ -24,21 +24,18 @@ $(document).ready(function () {
         let count = 8;
         let letterBank = [];
 
-
-
-
         letterAlphabet.on('click', function () {
             let letterInput = this.innerHTML.toLowerCase();
             let letterOutput = givenArray
             let indexOfLetter = answerArray.indexOf(letterInput)
             if (indexOfLetter === -1) {
                 //msg when fail
-                alert('try again');
+               // alert('try again');
                 //Remaining tries counter
                 count -= 1;
                 $('#TriesLeft').html(count);
                 letterBank.push(letterInput)
-                $('#WrongLetters').html(letterBank)
+                $('#WrongLetters').html(letterBank.join(' ').toUpperCase())
                 //Adding wrong letter to the letter bank
                 //console.log(letterBank.join(' '))
                 this.innerHTML = '_';
@@ -51,6 +48,9 @@ $(document).ready(function () {
                 $('#EmptyLetters').html(letterOutput.join(' ').toUpperCase());
                 
             }
+
+            
+
 
         })
     }

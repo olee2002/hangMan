@@ -58,11 +58,10 @@ header{
 }
 .ClickOnLetters{
     display:flex;
-    flex-flow: column wrap;
-    justify-content: space-between;
-    align-items: center;
-    align-content: center;
-    text-align: center;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: flex-end;
+  
     /* flex:1; */
     width: 50vw;
     height: 20vh;
@@ -94,7 +93,7 @@ header{
 #LetterBank,#NumsOfTries,#Hangman{
     display:  flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     border: 1px black solid;
     flex:1;
@@ -102,5 +101,6 @@ header{
 }
 
 #WrongLetters,#TriesLeft,#image{
-    font-size:4vw;
+    font-size:5vw;
+    flex: 1;
 }
