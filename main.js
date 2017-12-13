@@ -30,11 +30,12 @@ $(document).ready(function () {
             let indexOfLetter = answerArray.indexOf(letterInput)
             if (indexOfLetter === -1) {
                 //msg when fail
-               // alert('try again');
+                // alert('try again+remaining tries'+count);
                 //Remaining tries counter
                 count -= 1;
                 $('#TriesLeft').html(count);
                 letterBank.push(letterInput)
+                console.log(letterInput)
                 $('#WrongLetters').html(letterBank.join(' ').toUpperCase())
                 //Adding wrong letter to the letter bank
                 //console.log(letterBank.join(' '))
@@ -44,12 +45,30 @@ $(document).ready(function () {
                 //msg when succeed
                 //alert("Yay You've got it")
                 //Add letter to the empty
-                letterOutput[indexOfLetter]=letterInput
-                $('#EmptyLetters').html(letterOutput.join(' ').toUpperCase());
+                //letterOutput[indexOfLetter] = letterInput
                 
+                //$('#EmptyLetters').html(letterOutput.join(' ').toUpperCase());
+                
+                
+                answerArray.forEach(function (item) {
+                    console.log(item)
+                    console.log(letterInput)
+                    if (letterInput===item) {
+                        letterOutput[indexOfLetter]=letterInput  
+                        $('#EmptyLetters').html(letterOutput);
+                        console.log(letterOutput.join(' ').toUpperCase())
+                    }
+                })
+
+
+
+
+
+
             }
 
-            
+        
+
 
 
         })
