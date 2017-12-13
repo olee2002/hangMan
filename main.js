@@ -23,28 +23,34 @@ $(document).ready(function () {
         let letterAlphabet = $('.Alphabet');
         let count = 8;
         let letterBank = [];
-        
 
-        
+
+
 
         letterAlphabet.on('click', function () {
             let letterInput = this.innerHTML.toLowerCase();
-            let letterOutput = givenArray.join(' ')
-
-            if (answerArray.indexOf(letterInput) === -1) {
+            let letterOutput = givenArray
+            let indexOfLetter = answerArray.indexOf(letterInput)
+            if (indexOfLetter === -1) {
                 alert('try again');
                 count -= 1;
                 $('#TriesLeft').html(count);
                 letterBank.push(letterInput)
                 $('#WrongLetters').html(letterBank)
-                console.log(letterBank)
+                console.log(letterBank.join(' '))
                 this.innerHTML = '_';
 
             } else {
+
                 alert("Yay You've got it")
-                
+                // givenArray[indexOfLetter]=letterInput
+                //$('#EmptyLetters').html(letterInput[indexOfLetter]);
+                letterOutput[indexOfLetter]=letterInput
+                $('#EmptyLetters').html(letterOutput.join(' ').toUpperCase());
+                console.log(letterOutput[indexOfLetter])
+                console.log(letterOutput)
             }
-            
+
         })
     }
     //start();
