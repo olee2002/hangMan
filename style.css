@@ -16,7 +16,7 @@ header{
     flex-direction: column;
     justify-content: center;
     background-color: rgb(197, 150, 91);
-    width: 70vh;
+    width: 70vw;
     height: 12vh;
     border: 1px rgb(0, 0, 0) solid;
     font-size: 4.5em;
@@ -33,7 +33,7 @@ header{
     align-items: center;
     flex:1;
     border: 1px black solid;
-    width: 70vh;
+    width: 70vw;
     height: 60vh;
     font-size: 1.25rem;
     text-align: center;
@@ -64,7 +64,7 @@ header{
     align-content: center;
     text-align: center;
     /* flex:1; */
-    width: 50vh;
+    width: 50vw;
     height: 20vh;
     font-size: 2rem;
     
@@ -81,7 +81,7 @@ header{
     flex:1;
     background-color: rgb(197, 150, 91);
     border: 1px black solid;
-    width: 70vh;
+    width: 70vw;
     height: 20vh;
     font-size: 1rem;
    

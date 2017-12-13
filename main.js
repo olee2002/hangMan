@@ -1,40 +1,58 @@
-$(document).ready(function() {
+$(document).ready(function () {
 
-//Creat an array of words that will be given to users to guess.
-const wordsArray = ['apple', 'banana', 'strawberry', 'watermelon', 'pineapple', 'orange', 'lemon', 'lime', 'kiwi', 'grape'];
+    //Creat an array of words that will be given to users to guess.
+    const wordsArray = ['apple', 'banana', 'strawberry', 'watermelon', 'pineapple', 'orange', 'lemon', 'lime', 'kiwi', 'grape'];
 
 
 
-//Start - generate a random name of fruits from the given array and a corresponding number of blank spaces appears in the main playboard. 
-let start = function () {
-    const randomWord = wordsArray[Math.floor(Math.random() * wordsArray.length)];
-    console.log(randomWord)
-    let givenArray = [];
+    //Start - generate a random name of fruits from the given array and a corresponding number of blank spaces appears in the main playboard. 
+    let start = function () {
+        const randomWord = wordsArray[Math.floor(Math.random() * wordsArray.length)];
+        console.log(randomWord)
 
-    for (let i = 0; i < randomWord.length; i++) {
-        givenArray[i] = '_';
-        //console.log(givenArray)
+        let givenArray = [];
+        let answerArray = randomWord.split('');
+        //console.log(randomWord.split(''))
+        console.log(answerArray)
+        for (let i = 0; i < randomWord.length; i++) {
+            givenArray[i] = '_';
+        }
+        $('#EmptyLetters').html(givenArray.join(' '));
+
+        //create the alphabet letters and disappear when clicked in the game
+        let letterAlphabet = $('.Alphabet');
+        let count = 8;
+        let letterBank = [];
+        
+
+        
+
+        letterAlphabet.on('click', function () {
+            let letterInput = this.innerHTML.toLowerCase();
+            let letterOutput = givenArray.join(' ')
+
+            if (answerArray.indexOf(letterInput) === -1) {
+                alert('try again');
+                count -= 1;
+                $('#TriesLeft').html(count);
+                letterBank.push(letterInput)
+                $('#WrongLetters').html(letterBank)
+                console.log(letterBank)
+                this.innerHTML = '_';
+
+            } else {
+                alert("Yay You've got it")
+                
+            }
+            
+        })
     }
-
-    $('#EmptyLetters').html(givenArray.join(' '));
-    //console.log(randomWordChosen)
-}
-//start();
-$('#reset').on('click', start);
+    //start();
+    $('#reset').on('click', start);
 
 
 
-//create the alphabet letters to choose in the game
-let letterAlphabet =$('.Alphabet');
-for (let i = 0; i < letterAlphabet.length; i++) {
-    console.log(letterAlphabet[i])
-    letterAlphabet[i].addEventListener('click',letterClicked)
-    function letterClicked(){
-    this.innerHTML = "_";
-    }
 
-    
-}
 
 
 
