@@ -1,0 +1,106 @@
+body {
+    margin-top: 10%;
+    font-family: 'Indie Flower', cursive; 
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.container{
+    border: 2px rgb(0, 0, 0) solid;
+}
+header{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(197, 150, 91);
+    width: 70vw;
+    height: 12vh;
+    border: 1px rgb(0, 0, 0) solid;
+    font-size: 10vw;
+    text-align: center;
+}
+
+
+.subcontainer01{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(65, 141, 69);
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex:1;
+    border: 1px black solid;
+    width: 70vw;
+    height: 60vh;
+    font-size: 3vw;
+    text-align: center;
+}
+
+#LetterSpaces{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+#fruits{
+    font-size:4vw;
+    font-weight: bold;
+    
+}
+#reset{
+    background-color: black;
+    color:white;
+    font-family: 'Indie Flower', cursive; 
+    
+    font-size: 2.5vw;
+}
+.ClickOnLetters{
+    display:flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    /* flex:1; */
+    width: 50vw;
+    height: 20vh;
+    font-size: 4.75vw;
+    
+}
+.Alphabet{
+    flex:1;
+   
+    
+}
+
+.subcontainer02{
+    display: flex;
+    justify-content: center;
+    flex:1;
+    background-color: rgb(197, 150, 91);
+    border: 1px black solid;
+    width: 70vw;
+    height: 20vh;
+    font-size: 1rem;
+   
+}
+#EmptyLetters{
+    font-size: 5vw;
+    flex:1;
+}
+
+#LetterBank,#NumsOfTries,#Hangman{
+    display:  flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px black solid;
+    flex:1;
+    
+}
+
+#WrongLetters,#TriesLeft,#image{
+    font-size:4vw;
+}
