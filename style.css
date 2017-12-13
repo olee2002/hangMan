@@ -16,10 +16,10 @@ header{
     flex-direction: column;
     justify-content: center;
     background-color: rgb(197, 150, 91);
-    width: 70vw;
+    width: 70vh;
     height: 12vh;
     border: 1px rgb(0, 0, 0) solid;
-    font-size: 9vw;
+    font-size: 8vh;
     text-align: center;
 }
 
@@ -33,9 +33,9 @@ header{
     align-items: center;
     flex:1;
     border: 1px black solid;
-    width: 70vw;
+    width: 70vh;
     height: 60vh;
-    font-size: 3vw;
+    font-size: 3vh;
     text-align: center;
 }
 
@@ -45,7 +45,7 @@ header{
     align-content: center;
 }
 #fruits{
-    font-size:4vw;
+    font-size:4vh;
     font-weight: bold;
     
 }
@@ -54,7 +54,7 @@ header{
     color:white;
     font-family: 'Indie Flower', cursive; 
     
-    font-size: 2.5vw;
+    font-size: 2.5vh;
 }
 .ClickOnLetters{
     display:flex;
@@ -62,9 +62,9 @@ header{
     justify-content: center;
     align-items: stretch;
     /* flex:1; */
-    width: 50vw;
+    width: 50vh;
     height: 20vh;
-    font-size: 4.75vw;
+    font-size: 4vh;
     
 }
 .first,.second{
@@ -83,13 +83,13 @@ header{
     flex:1;
     background-color: rgb(197, 150, 91);
     border: 1px black solid;
-    width: 70vw;
+    width: 70vh;
     height: 20vh;
-    font-size: 1rem;
+    font-size: 3vh;
    
 }
 #EmptyLetters{
-    font-size: 5vw;
+    font-size: 5vh;
     flex:1;
 }
 
@@ -103,7 +103,11 @@ header{
     
 }
 
-#WrongLetters,#TriesLeft,#image{
-    font-size:5vw;
+#TriesLeft,#image{
+    font-size:8vh;
     flex: 1;
+}
+#WrongLetters{
+    font-size:4vh;
+
 }
