@@ -11,19 +11,19 @@ A word will be given for a user to guess with a theme presented. The game will h
 If the user fills out the empty spaces, a message of "You win" will pop up else the user loses all the tries a message of "You lose" will pop up in the screen.
 
 
-## A Link to the Deployed App:
+## Link to the Deployed App:
 
 
 >http://oleeshangmangame.bitballoon.com/
 
 
-## A Link to the Trello Board:
+## Link to the Trello Board:
 
 
 >https://trello.com/b/403oY0Py/atl-wdi-13-game-project-hangman
 
 
-## A Link to any Wirefames or Mockups:
+## Link to any Wirefames or Mockups:
 
 
 >https://www.figma.com/file/EKVjDeNgOgwPaCBCyHciCmSm/Hangman-game-framework
