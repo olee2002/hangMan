@@ -24,7 +24,7 @@ $(document).ready(function () {
         let count = 6;
         let letterBank = [];
         //console.log(letterBank)
-        $('#reset').html("Let's begin! Click a letter below.")
+        $('#reset').html("Let's begin! Click a letter below.  &#8595;")
 
         letterAlphabet.on('click', function () {
             let letterInput = this.innerHTML;
