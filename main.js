@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
     //Creat an array of words that will be given to users to guess.
-    const wordsArray = ['PEAR', 'BANANA', 'APPLE', 'MANGO', 'PEACH', 'WATERMELON', 'AVOCADO', 'ORANGE', 'LEMON', 'LIME', 'OLIVE', 'GRAPE'];
+    const wordsArray = ['PEAR', 'BANANA', 'APPLE', 'PINEAPPLE', 'KIWI' 'MANGO', 'PEACH', 'WATERMELON', 'AVOCADO', 'ORANGE', 'LEMON', 'LIME', 'OLIVE', 'GRAPE'];
 
     //const wordsArray = ['BANANA', 'MMANGO', 'PPEACH']
 
@@ -29,11 +29,11 @@ $(document).ready(function () {
         letterAlphabet.on('click', function () {
             let letterInput = this.innerHTML;
             let indexOfLetter = answerArray.indexOf(letterInput)
-            
-            function endingAcivity (){
+
+            function endingEffect() {
                 $('#reset').html('Game Over!');
-                $('#StarOver').attr({class: "animated infinite tada"});
-                $('#StarOver').html('Click Heart!')
+                $('#StarOver').attr({ class: "animated tada" });
+
             }
 
             if (indexOfLetter === -1) {
@@ -43,11 +43,12 @@ $(document).ready(function () {
                     letterBank.push(letterInput);
                     $('#WrongLetters').text(letterBank.join(' '));
                     this.innerHTML = '_';
+                    $('#reset').html('Nope, Guess another one!');
 
                 } else if (count === 0) {
-                    alert('You Lost! Please try again');
+                    alert("You've Lost! Please try again");
                     $('#TriesLeft').html(count);
-                    endingAcivity();
+                    endingEffect();
 
 
 
@@ -56,14 +57,15 @@ $(document).ready(function () {
                 answerArray.forEach(function (item, index) {
                     if (letterInput === item) {
                         givenArray[index] = letterInput;
-                        $(event.target).css('color','rgba(0,0,0,0.2)');
-                       
+                        $(event.target).css('color', 'rgba(0,0,0,0.2)');
+                        $('#reset').html("Yay You've got it!");
+
                     }
                 })
                 $('#EmptyLetters').html(givenArray.join(' '));
                 if (givenArray.join('') === answerArray.join('')) {
                     alert('You Win!');
-                    endingAcivity();
+                    endingEffect();
                 }
 
 
