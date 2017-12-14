@@ -31,7 +31,7 @@ $(document).ready(function () {
             let indexOfLetter = answerArray.indexOf(letterInput)
 
             function endingEffect() {
-                $('#reset').html('Game Over!');
+                $('#reset').html('Game Over! Click the Heart Below to Restart. &#8595;');
                 $('#StarOver').attr({ class: "animated tada" });
 
             }
