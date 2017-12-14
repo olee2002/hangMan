@@ -21,50 +21,37 @@ $(document).ready(function () {
         //create the alphabet letters and disappear when clicked in the game
         let letterAlphabet = $('.Alphabet');
         //console.log(letterAlphabet)
-        let count = 8;
+        let count = 6;
         let letterBank = [];
         //console.log(letterBank)
 
         letterAlphabet.on('click', function () {
             let letterInput = this.innerHTML;
-            //let letterOutput = givenArray
             let indexOfLetter = answerArray.indexOf(letterInput)
             console.log(indexOfLetter)
             if (indexOfLetter === -1) {
-                //msg when fail
-                //Remaining tries counter
-                //Adding wrong letter to the letter bank
-                letterBank.push(letterInput)
-                $('#WrongLetters').text(letterBank.join(' '))
-                
-                //console.log(letterBank.join(' '))
-                this.innerHTML = '_';
                 count -= 1;
-                $('#TriesLeft').html(count);
-                
-                
-                alert('Incorrect!');
+                if (count > 0) {
+                    $('#TriesLeft').html(count);
+                    letterBank.push(letterInput)
+                    $('#WrongLetters').text(letterBank.join(' '))
+                    this.innerHTML = '_';
+
+                } else if (count === 0) {
+                    alert('You Lost! Please try again')
+                }
             } else {
-                //msg when succeed
-                alert("correct")
-                //Add letter to the empty space
                 answerArray.forEach(function (item) {
-                    console.log(item)
-                    console.log(letterInput)
-                    if (letterInput===item) {
-                        givenArray[indexOfLetter]=letterInput  
+                    if (letterInput === item) {
+                        givenArray[indexOfLetter] = letterInput
                         $('#EmptyLetters').html(givenArray.join(' '));
-                        
                     }
+
+
                 })
             }
-        // if(givenArray.values===answerArray.values){
-        //     console.log(givenArray.values)
-        //     alert('You Win!')
-        // }else if (count === 0){
-        //     alert('You Lost! Please try again')
-        // }
-        
+
+
         })
     }
     //start();
