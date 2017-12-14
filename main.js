@@ -44,9 +44,9 @@ $(document).ready(function () {
                     $('#TriesLeft').html(count);
                     $('#reset').html('Game Over!');
                     $('#StarOver').attr({
-                        class: "animated infinite tada"
+                        class: "animated tada"
                     });
-                    $('#StarOver').html('Click Me!')
+                    $('#StarOver').html('Click Heart!')
 
 
 
@@ -55,7 +55,7 @@ $(document).ready(function () {
                 answerArray.forEach(function (item, index) {
                     if (letterInput === item) {
                         givenArray[index] = letterInput;
-                        $(event.target).css('color', 'rgba(0,0,0,0.2)');
+                        $(event.target).css('color','rgba(0,0,0,0.2)');
 
                     }
                 })
@@ -63,7 +63,10 @@ $(document).ready(function () {
                 if (givenArray.join('') === answerArray.join('')) {
                     alert('You Win!')
                     $('#reset').text('Game Over!')
-                    $('#StarOver').html('Click Me!')
+                    $('#StarOver').attr({
+                        class: "animated tada"
+                    });
+                    $('#StarOver').html('Click Heart!')
 
                 }
 
