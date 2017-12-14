@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
     //Creat an array of words that will be given to users to guess.
-    const wordsArray = ['PEAR','BANANA','APPLE','MANGO', 'PEACH', 'WATERMELON', 'AVOCADO', 'ORANGE', 'LEMON', 'LIME', 'OLIVE', 'GRAPE'];
+    const wordsArray = ['PEAR', 'BANANA', 'APPLE', 'MANGO', 'PEACH', 'WATERMELON', 'AVOCADO', 'ORANGE', 'LEMON', 'LIME', 'OLIVE', 'GRAPE'];
 
     //const wordsArray = ['BANANA', 'MMANGO', 'PPEACH']
 
@@ -24,10 +24,13 @@ $(document).ready(function () {
         let count = 6;
         let letterBank = [];
         //console.log(letterBank)
+        $('#reset').html("Let's begin! Click a letter below.")
 
         letterAlphabet.on('click', function () {
             let letterInput = this.innerHTML;
             let indexOfLetter = answerArray.indexOf(letterInput)
+
+
             if (indexOfLetter === -1) {
                 count -= 1;
                 if (count > 0) {
@@ -41,25 +44,28 @@ $(document).ready(function () {
                 }
             } else {
                 answerArray.forEach(function (item, index) {
-                if (letterInput === item) {
-                    givenArray[index] = letterInput  
-                    
-                  }
+                    if (letterInput === item) {
+                        givenArray[index] = letterInput
+
+                    }
                 })
                 $('#EmptyLetters').html(givenArray.join(' '));
-                if(givenArray.join('')===answerArray.join('')){
+                if (givenArray.join('') === answerArray.join('')) {
                     alert('You Win!')
                 }
-            
-               
+
+
             }
-       
+
         })
 
     }
 
     //start();
     $('#reset').on('click', start);
+
+    const audio = document.getElementById("audio");
+    audio.volume = 0.4;
 
 
 

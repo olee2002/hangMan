@@ -8,18 +8,20 @@
     <title>HangMan</title>
 </head>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
-<link rel="stylesheet" 
-href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css"
-integrity="sha384-OHBBOqpYHNsIqQy8hL1U+8OXf9hH6QRxi0+EODezv82DfnZoV7qoHAZDwMwEJvSw"
-crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css" integrity="sha384-OHBBOqpYHNsIqQy8hL1U+8OXf9hH6QRxi0+EODezv82DfnZoV7qoHAZDwMwEJvSw"
+    crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="style.css" />
 
 <body>
+    <audio controls autoplay id="audio">
+
+        <source src="audio/Hangman.mp3" type="audio/mpeg"> Your browser does not support the audio element.
+    </audio>
     <div class="container">
         <header>
 
-            <div class = "animated tada" >HangMan</div>
+            <div class="animated tada">HangMan</div>
 
         </header>
         <main class="subcontainer01">
@@ -30,41 +32,41 @@ crossorigin="anonymous">
                 <div id="EmptyLetters">_ _ _ _ _ _ _ _ _</div>
                 <br>
                 <button id="reset">Click To Start!</button>
-            
+
             </div>
-            
+
             <div class="ClickOnLetters">
-                <div class= "first"> 
-                <div class="Alphabet">A</div>
-                <div class="Alphabet">B</div>
-                <div class="Alphabet">C</div>
-                <div class="Alphabet">D</div>
-                <div class="Alphabet">E</div>
-                <div class="Alphabet">F</div>
-                <div class="Alphabet">G</div>
-                <div class="Alphabet">H</div>
-                <div class="Alphabet">I</div>
-                <div class="Alphabet">J</div>
-                <div class="Alphabet">K</div>
-                <div class="Alphabet">L</div>
-                <div class="Alphabet">M</div>
+                <div class="first">
+                    <div class="Alphabet">A</div>
+                    <div class="Alphabet">B</div>
+                    <div class="Alphabet">C</div>
+                    <div class="Alphabet">D</div>
+                    <div class="Alphabet">E</div>
+                    <div class="Alphabet">F</div>
+                    <div class="Alphabet">G</div>
+                    <div class="Alphabet">H</div>
+                    <div class="Alphabet">I</div>
+                    <div class="Alphabet">J</div>
+                    <div class="Alphabet">K</div>
+                    <div class="Alphabet">L</div>
+                    <div class="Alphabet">M</div>
+                </div>
+                <div class="second">
+                    <div class="Alphabet">N</div>
+                    <div class="Alphabet">O</div>
+                    <div class="Alphabet">P</div>
+                    <div class="Alphabet">Q</div>
+                    <div class="Alphabet">R</div>
+                    <div class="Alphabet">S</div>
+                    <div class="Alphabet">T</div>
+                    <div class="Alphabet">U</div>
+                    <div class="Alphabet">V</div>
+                    <div class="Alphabet">W</div>
+                    <div class="Alphabet">X</div>
+                    <div class="Alphabet">Y</div>
+                    <div class="Alphabet">Z</div>
+                </div>
             </div>
-            <div class="second">  
-                <div class="Alphabet">N</div>
-                <div class="Alphabet">O</div>
-                <div class="Alphabet">P</div>
-                <div class="Alphabet">Q</div>
-                <div class="Alphabet">R</div>
-                <div class="Alphabet">S</div>
-                <div class="Alphabet">T</div>
-                <div class="Alphabet">U</div>
-                <div class="Alphabet">V</div>
-                <div class="Alphabet">W</div>
-                <div class="Alphabet">X</div>
-                <div class="Alphabet">Y</div>
-                <div class="Alphabet">Z</div>
-            </div>
-        </div>
         </main>
         <aside class="subcontainer02">
             <div id="LetterBank">
@@ -77,7 +79,7 @@ crossorigin="anonymous">
             </div>
             <div id="Hangman">
                 <div> Hangman</div>
-                <div class ="animated infinite pulse" id="img">&hearts;</div>
+                <div class="animated infinite pulse" id="img">&hearts;</div>
             </div>
         </aside>
 
