@@ -1,3 +1,5 @@
+
+
 body {
     margin-top: 5%;
     font-family: 'Indie Flower', cursive; 
@@ -103,7 +105,7 @@ header{
     
 }
 
-#TriesLeft,#image{
+#TriesLeft{
     font-size:8vh;
     flex: 1;
 }
@@ -111,3 +113,9 @@ header{
     font-size:4vh;
 
 }
+#img {
+    font-size:6vh;
+    color:rgb(197, 51, 51)
+    
+}
+
