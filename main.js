@@ -29,7 +29,12 @@ $(document).ready(function () {
         letterAlphabet.on('click', function () {
             let letterInput = this.innerHTML;
             let indexOfLetter = answerArray.indexOf(letterInput)
-
+            
+            function endingAcivity (){
+                $('#reset').html('Game Over!');
+                $('#StarOver').attr({class: "animated infinite tada"});
+                $('#StarOver').html('Click Heart!')
+            }
 
             if (indexOfLetter === -1) {
                 count -= 1;
@@ -42,11 +47,7 @@ $(document).ready(function () {
                 } else if (count === 0) {
                     alert('You Lost! Please try again');
                     $('#TriesLeft').html(count);
-                    $('#reset').html('Game Over!');
-                    $('#StarOver').attr({
-                        class: "animated tada"
-                    });
-                    $('#StarOver').html('Click Heart!')
+                    endingAcivity();
 
 
 
@@ -56,18 +57,13 @@ $(document).ready(function () {
                     if (letterInput === item) {
                         givenArray[index] = letterInput;
                         $(event.target).css('color','rgba(0,0,0,0.2)');
-
+                       
                     }
                 })
                 $('#EmptyLetters').html(givenArray.join(' '));
                 if (givenArray.join('') === answerArray.join('')) {
-                    alert('You Win!')
-                    $('#reset').text('Game Over!')
-                    $('#StarOver').attr({
-                        class: "animated tada"
-                    });
-                    $('#StarOver').html('Click Heart!')
-
+                    alert('You Win!');
+                    endingAcivity();
                 }
 
 
