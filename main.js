@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
     //Creat an array of words that will be given to users to guess.
-    const wordsArray = ['PEAR', 'BANANA', 'APPLE', 'PINEAPPLE', 'KIWI' 'MANGO', 'PEACH', 'WATERMELON', 'AVOCADO', 'ORANGE', 'LEMON', 'LIME', 'OLIVE', 'GRAPE'];
+    const wordsArray = ['PEAR', 'BANANA', 'APPLE', 'PINEAPPLE', 'KIWI', 'MANGO', 'PEACH', 'WATERMELON', 'AVOCADO', 'ORANGE', 'LEMON', 'LIME', 'OLIVE', 'GRAPE'];
 
     //const wordsArray = ['BANANA', 'MMANGO', 'PPEACH']
 
