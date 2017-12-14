@@ -28,7 +28,6 @@ $(document).ready(function () {
         letterAlphabet.on('click', function () {
             let letterInput = this.innerHTML;
             let indexOfLetter = answerArray.indexOf(letterInput)
-            console.log(indexOfLetter)
             if (indexOfLetter === -1) {
                 count -= 1;
                 if (count > 0) {
@@ -44,10 +43,17 @@ $(document).ready(function () {
                 answerArray.forEach(function (item, index) {
                 if (letterInput === item) {
                     givenArray[index] = letterInput  
+                    
                   }
                 })
                 $('#EmptyLetters').html(givenArray.join(' '));
+                if(givenArray.join('')===answerArray.join('')){
+                    alert('You Win!')
+                }
+            
+               
             }
+       
         })
 
     }
