@@ -1,9 +1,9 @@
 $(document).ready(function () {
 
     //Creat an array of words that will be given to users to guess.
-    const wordsArray = ['PEAR', 'MANGO', 'PEACH', 'WATERMELON', 'AVOCADO', 'ORANGE', 'LEMON', 'LIME', 'OLIVE', 'GRAPE'];
+    const wordsArray = ['PEAR','BANANA','APPLE','MANGO', 'PEACH', 'WATERMELON', 'AVOCADO', 'ORANGE', 'LEMON', 'LIME', 'OLIVE', 'GRAPE'];
 
-
+    //const wordsArray = ['BANANA', 'MMANGO', 'PPEACH']
 
     //Start - generate a random name of fruits from the given array and a corresponding number of blank spaces appears in the main playboard. 
     let start = function () {
@@ -41,19 +41,17 @@ $(document).ready(function () {
                     alert('You Lost! Please try again')
                 }
             } else {
-                answerArray.forEach(function (item) {
-                    if (letterInput === item) {
-                        givenArray[indexOfLetter] = letterInput
-                        $('#EmptyLetters').html(givenArray.join(' '));
-                    }
-
-
+                answerArray.forEach(function (item, index) {
+                if (letterInput === item) {
+                    givenArray[index] = letterInput  
+                  }
                 })
+                $('#EmptyLetters').html(givenArray.join(' '));
             }
-
-
         })
+
     }
+
     //start();
     $('#reset').on('click', start);
 
